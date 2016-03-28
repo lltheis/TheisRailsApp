@@ -1,7 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I'm editing this README with an extra sentence to see these changes.
+This README would normally document whatever steps are necessary to get the application up and running.
 
 Things you may want to cover:
 
