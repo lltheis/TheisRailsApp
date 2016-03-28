@@ -1,3 +1,113 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//GOOGLE FONTS
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,700);
+
+// Font Variables
+$lobster-two: 'Lobster Two', Futura, Helevetica, Arial, sans-serif;
+
+//GENERAL
+h1, h2 {
+	font-family: $lobster-two;
+	color: #8cb63d;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+body {
+	padding: 50px 10px 5px 10px;
+}
+
+//NAVIGATION
+.navbar-inverse {
+	background-color: #333;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	z-index: 1;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+	color: #6fc84c;
+	transition: background-color 400ms,color 400ms;
+	-webkit-transition:background-color 400ms,color 400ms;
+}
+
+.navbar-header a {
+	color: #6fc84c;
+	font-family: 'Lobster Two', Futura, Arial, sans-serif;
+	letter-spacing: .05em;
+	font-size: 1.5em;
+}
+
+.nav-other {
+	letter-spacing: .05em;
+	padding: 0px 10px 0px 10px;
+}
+
+.nav-home {
+	padding-top: 10px;
+}
+
+.navbar>ul>li>a {
+	color: #fff;
+}
+
+.anchor {
+	padding-top: 65px;
+}
+
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle,
+.nav,
+.navbar,
+.navbar-inverse .navbar-inner {
+filter:none!important;
+background-image: none;
+}
+
+.dropit {
+  list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.dropit .dropit-trigger { position: relative; }
+.dropit .dropit-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0; /* dropdown left or right */
+    z-index: 1000;
+    display: none;
+    min-width: 150px;
+    list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.dropit .dropit-open .dropit-submenu { 
+	display: block; 
+}
+
+//FOOTER
+.footer {
+	margin-top: 10px;
+	padding: 15px;
+	background-color: #E3F1CD;
+}
+
+.footer-left {
+	display: inline-block;
+}
+
+.footer-right {
+	float: right;
+	padding-right:5px;
+}
+
