@@ -3,13 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-//GOOGLE FONTS
+ //GOOGLE FONTS
 @import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,700);
 
-// Font Variables
+
+// FONT VARIABLES
 $lobster-two: 'Lobster Two', Futura, Helevetica, Arial, sans-serif;
 
+
 //GENERAL
+body {
+	padding: 50px 10px 200px 10px;
+	font-family: Arial, sans-serif;
+}
+
+
 h1, h2 {
 	font-family: $lobster-two;
 	color: #8cb63d;
@@ -17,9 +25,6 @@ h1, h2 {
 	margin-bottom: 10px;
 }
 
-body {
-	padding: 50px 10px 5px 10px;
-}
 
 //NAVIGATION
 .navbar-inverse {

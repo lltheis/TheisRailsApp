@@ -23,3 +23,10 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+# PostgreSQL
+# development:
+#   adapter: postgresql
+#   host: localhost
+#   username: user
+#   database: app-dev

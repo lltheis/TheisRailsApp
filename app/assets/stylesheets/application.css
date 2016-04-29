@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+ th {
+ 	padding: 0px 10px 0px 10px;
+ 	 	font-size: 1.5em;
+ }
+
+ .product-desc {
+ 	background-color: #5F25A0;
+ 	margin-bottom: 0px;
+ }
+
+ .product-tools {
+ 	background-color: #575757;
+ }
+
+ .product-grid {
+ 	padding-left: 0px;
+ 	padding-right: 0px;
+ }
+
+
