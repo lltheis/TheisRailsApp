@@ -5,7 +5,7 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="product-grid col-sm-6 col-lg-4">
-        <div><%= image_tag(product.image_url, class: "img-responsive") %></div>
+        <div><%= image_tag(product.image_url, class: "img-responsive product-img") %></div>
         <div class="product-desc">
           <h1><%= product.name %></h1>
           <p><%= product.description %></p>
