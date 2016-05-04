@@ -21,7 +21,8 @@
 
  .product-desc {
  	background-color: #5F25A0;
- 	margin-bottom: 0px;
+ 	color: #B4B4B4;
+ 	padding: 5px;
  }
 
  .product-tools {
@@ -29,8 +30,7 @@
  }
 
  .product-grid {
- 	padding-left: 0px;
- 	padding-right: 0px;
+ 		padding-bottom: 10px;
  }
 
 
