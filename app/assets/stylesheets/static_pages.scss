@@ -5,10 +5,12 @@
 
  //GOOGLE FONTS
 @import url(https://fonts.googleapis.com/css?family=Lobster+Two:400,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
 
 
 // FONT VARIABLES
-$lobster-two: 'Lobster Two', Futura, Helevetica, Arial, sans-serif;
+$lobster-two: 'Lobster Two', Arial, sans-serif;
+$playfair-display: 'Playfair Display', 'Times New Roman', serif;
 
 
 //GENERAL
@@ -51,8 +53,9 @@ h1, h2 {
 .navbar-header a {
 	color: #6fc84c;
 	font-family: 'Lobster Two', Futura, Arial, sans-serif;
+	text-transform: lowercase;
 	letter-spacing: .05em;
-	font-size: 1.5em;
+	font-size: 4em;
 }
 
 .nav-other {
@@ -61,7 +64,7 @@ h1, h2 {
 }
 
 .nav-home {
-	padding-top: 10px;
+	padding-top: 20px;
 }
 
 .navbar>ul>li>a {
@@ -103,6 +106,17 @@ background-image: none;
 .dropit .dropit-open .dropit-submenu { 
 	display: block; 
 }
+
+//BACKGROUND
+#background {
+	background-image: url("images/static_pages/mountains.jpg");
+	padding-top: 25px;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #279B2E;
+	height: 200px;
+}
+
 
 //FOOTER
 .footer {

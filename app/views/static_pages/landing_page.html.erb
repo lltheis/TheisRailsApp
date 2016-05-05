@@ -1,11 +1,16 @@
-<div class="container-fluid">
+<div class="container-fluid featured-product">
 	<div class="row">
 		<div class="product-grid col-sm-10 col-sm-offset-1">
 			<h1>Featured Product</h1>
+					<%= @featured_product.image_url %>
 				<div class="product-desc">
 					<%= @featured_product.name %><br>
 					<%= @featured_product.description %><br>
-					<%= @featured_product.colour %>
+					Color: <%= @featured_product.colour %>
 				</div>
+		</div>
+		<div class="featured-next col-sm-8 col-sm-offset-2">
+			<div class = "featured-next"><strong>Ready to buy?</strong> <a href="orders">Yes!</a></div>
+			<div class = "featured-next"><strong>Want to check out other bikes? </strong><a href="products">Yes!</a></div>
 		</div>
 </div>

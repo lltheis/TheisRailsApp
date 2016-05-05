@@ -14,12 +14,30 @@
  *= require_self
  */
 
+/*****  GENERAL   *****/
  th {
  	padding: 0px 10px 0px 10px;
  	 	font-size: 1.5em;
  }
 
- .product-desc {
+ .page-title {
+ 	padding-top: 20px;
+ }
+
+/*****  PRODUCT   *****/
+ .featured-product {
+ 	padding-top: 50px;
+ }
+
+ .featured-next {
+ 	color: #279B2E;
+ 	font-family: 'Playfair Display', 'Times New Roman', serif;
+ 	font-size: 1.25em;
+ 	text-transform: uppercase;
+ 	line-height: normal;
+ }
+
+  .product-desc {
  	background-color: #5F25A0;
  	color: #B4B4B4;
  	padding: 5px;
@@ -32,5 +50,4 @@
  .product-grid {
  		padding-bottom: 10px;
  }
-
 
