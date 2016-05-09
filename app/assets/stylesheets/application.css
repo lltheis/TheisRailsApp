@@ -21,7 +21,7 @@
  }
 
  .page-title {
- 	padding-top: 20px;
+	padding: 20px 0px 0px 30px;
  }
 
 
@@ -47,9 +47,15 @@
 
  .product-tools {
  	background-color: #575757;
+ 	width: 100%;
+ 	padding: 5px 2px;
+ 	text-align: right;
  }
 
  .product-grid {
  		padding-bottom: 10px;
  }
 
+.link-to { 
+	margin-right: 10px; 
+}

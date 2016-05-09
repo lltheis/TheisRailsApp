@@ -17,6 +17,7 @@ $playfair-display: 'Playfair Display', 'Times New Roman', serif;
 body {
 	padding: 50px 0px 200px 0px;
 	font-family: Arial, sans-serif;
+	height: 100%;
 }
 
 
@@ -118,19 +119,5 @@ background-image: none;
 }
 
 
-//FOOTER
-.footer {
-	margin-top: 10px;
-	padding: 15px;
-	background-color: #E3F1CD;
-}
 
-.footer-left {
-	display: inline-block;
-}
-
-.footer-right {
-	float: right;
-	padding-right:5px;
-}
 

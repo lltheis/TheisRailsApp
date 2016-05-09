@@ -1,31 +1,32 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Our Products</h1>
-<div class="container-fluid">
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="product-grid col-sm-6 col-lg-4">
-        <div><%= image_tag(product.image_url, class: "img-responsive product-img") %></div>
-        <div class="product-desc">
-          <h1><%= product.name %></h1>
-          <p><%= product.description %></p>
-          <p><%= product.colour %></p>
-          <p><%= product.price %></p>
+<div class="page-title">
+  <h1>Our Products</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="product-grid col-sm-6 col-lg-4">
+          <div><%= image_tag(product.image_url, class: "img-responsive product-img center-block") %></div>
+          <div class="product-desc">
+            <h1><%= product.name %></h1>
+            <p><%= product.description %></p>
+            <p><%= product.colour %></p>
+            <p><%= product.price %></p>
+          </div>
+          <div class="product-tools">
+            <%= link_to 'Show', product, class: 'link-to' %>
+            <%= link_to 'Edit', edit_product_path(product), class: 'link-to' %>
+            <%= link_to 'Destroy', product, class: 'link-to', method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
         </div>
-        <div class="product-tools">
-          <%= link_to 'Show', product %>
-          <%= link_to 'Edit', edit_product_path(product) %>
-          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-      </div>
-    </div><!-- /row -->
-  </div><!-- /container -->
-  <% end %>
+      </div><!-- /row -->
+    </div><!-- /container -->
+    <% end %>
 
-<br>
+  <br>
 
-<div class="col-sm-12">
-<%= link_to 'New Product', new_product_path %>
+  <div class="col-sm-12">
+  <%= link_to 'New Product', new_product_path %>
+  </div>
 </div>
 
 
