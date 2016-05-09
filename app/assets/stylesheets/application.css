@@ -24,9 +24,11 @@
  	padding-top: 20px;
  }
 
+
 /*****  PRODUCT   *****/
  .featured-product {
  	padding-top: 50px;
+ 	max-height: 200px;
  }
 
  .featured-next {

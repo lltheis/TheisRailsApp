@@ -15,7 +15,7 @@ $playfair-display: 'Playfair Display', 'Times New Roman', serif;
 
 //GENERAL
 body {
-	padding: 50px 10px 200px 10px;
+	padding: 50px 0px 200px 0px;
 	font-family: Arial, sans-serif;
 }
 
@@ -109,12 +109,12 @@ background-image: none;
 
 //BACKGROUND
 #background {
-	background-image: url("images/static_pages/mountains.jpg");
-	padding-top: 25px;
+	background-image: image-url("mountains.jpg");
+	padding: 25px 0px 25px 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 	background-attachment: fixed;
 	background-size: cover;
-	color: #279B2E;
-	height: 200px;
 }
 
 
