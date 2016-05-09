@@ -11,15 +11,6 @@ body {
   margin-bottom: 50px;
 }
 
-@mixin clearfix {
-  clear: both;
-
-  &::before {
-    content: '';
-    display: table;
-  }
-}
-
 p, ol, ul, td {
   font-family: arial, helvetica, sans-serif;
   font-size: 13px;
@@ -36,11 +27,7 @@ a {
   color: #8cb63d;
 
 
-/*   &:visited {
-    color: #666;
-  }
- */
-  &:hover {
+&:hover {
     color: #8cb63d;
     text-decoration: none;
   }
