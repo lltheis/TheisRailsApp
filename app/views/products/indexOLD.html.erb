@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+  <div class="page-title">Our Products</div>
+  <div class="container-fluid">
+    <div class="row">
+      <%= render @products %>
+          </div>
+          <div class="product-tools">
+            <%= link_to 'Show', product, class: 'link-to' %>
+            <%= link_to 'Edit', edit_product_path(product), class: 'link-to' %>
+            <%= link_to 'Destroy', product, class: 'link-to', method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div><!-- /row -->
+        </div><!-- /container -->
+
+    <% end %>
+
+  <br>
+
+  <div class="col-sm-12">
+  <%= link_to 'New Product', new_product_path %>
+  </div>
+</div>
+
+
+
+

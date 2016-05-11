@@ -1,7 +1,7 @@
-<div class="page-title">
-	<h1>Edit Product</h1>
-	<%= render 'form' %>
+<div class="page-title">Edit Product</div>
 
-	<%= link_to 'Show', @product %> |
-	<%= link_to 'Back', products_path %>
-</div>
+<%= render 'form' %>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %> |
+<%= link_to 'Home Page', controller: "static_pages", action: "landing_page" %>
