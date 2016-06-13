@@ -15,14 +15,19 @@
  */
 
 /*****  GENERAL   *****/
+.content {
+ 	padding-left: 20px;
+ }
+
  th {
  	font-size: 1.5em;
  }
 
  .page-title {
-	padding: 10px 0px 0px 20px;
+	padding-top: 20px;
  }
 
+ 
 
 /*****  PRODUCT   *****/
  .product-desc {
@@ -89,7 +94,7 @@
 	font-family: 'Playfair Display', 'Times New Roman', serif;
 	font-weight: 700;
 	text-transform: lowercase;
-	padding: 20px 0px;
+	/*padding: 20px 0px;*/
 }
 
  .featured-product {
@@ -130,4 +135,21 @@
 .footer-right {
   float: right;
   padding-right:5px;
+}
+
+.new_product {
+	padding: 10px 0px 0px 25px;
+}
+
+/*****  SEARCH FORM   *****/
+.nav-search {
+	color: #333;
+}
+
+.nav-form {
+	padding: 5px 20px 0px 0px;
+}
+
+.nav-button {
+ padding: 3px 5px 3px 5px;
 }

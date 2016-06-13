@@ -32,12 +32,18 @@
       <li><%= link_to "Buy a Bike", products_path %></li>
       <li><%= link_to "About", static_pages_about_path %></li>
       <li><%= link_to "Get in Touch", static_pages_contact_path %></li>
-    </ul>
+      <li>
+      <%= form_tag("/products", method: "get", class: "navbar-form navbar-right nav-form") do %>
+        <%= text_field_tag(:q, "", placeholder: "Search", size: "15", class: "nav-search") %>
+        <%= submit_tag("Go!", class: "btn btn-primary nav-button") %>
+      <% end %></li>
+      </ul>
+  
   </div><!-- end navbar collapse -->
   </div><!-- end nav container -->
   </nav><!-- end navbar --> 
 
-<div>
+<div class="content">
 <%= yield %>
 </div>
 
