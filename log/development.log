@@ -35048,3 +35048,276 @@ Migrating to CreateOrders (20160504171240)
             FROM sqlite_temp_master
             WHERE name='index_orders_on_user_id' AND type='index'
 [0m
+
+
+Started POST "/static_pages/thank_you" for 10.0.2.2 at 2016-06-14 14:49:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.8/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.8/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.8/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.3ms)
+  [1m[36m (9.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (12.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProducts (20160425215403)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160425215403"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+Migrating to AddColorToProducts (20160426131728)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.4ms)[0m  ALTER TABLE "products" ADD "color" varchar
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160426131728"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+Migrating to RenameColorsInProducts (20160427194541)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aproducts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "colour" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "products"[0m
+  [1m[35m (5.6ms)[0m  DROP TABLE "products"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "colour" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aproducts"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aproducts"[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160427194541"]]
+  [1m[36m (6.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddPriceColumn (20160429025931)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (5.6ms)[0m  [1mALTER TABLE "products" ADD "price" integer[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160429025931"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateOrders (20160504171240)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "product_id" integer, "total" float) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_orders_on_product_id" ON "orders" ("product_id")
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160504171240"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+
+  [1m[36m (1.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+[0m
+
+
+Started POST "/static_pages/thank_you" for 10.0.2.2 at 2016-06-14 14:51:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#thank_you as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ngTI4e7rv1TOWxQKBKuF658KetRdRpsIO2AUcLLpx6V7pXyMRG+elYra82W9/ynrdd5gzPZ+ALqADm2j0H5OGQ==", "name"=>"Laura Theis", "email"=>"theis.laura.l@gmail.com", "message"=>"Testing", "commit"=>"Send"}
+
+ActionMailer::Base#mail: processed outbound mail in 326.2ms
+
+Sent mail to theis.laura.l@gmail.com (633.0ms)
+Date: Tue, 14 Jun 2016 14:51:51 +0000
+From: theis.laura.l@gmail.com
+To: theis.laura.l@gmail.com
+Message-ID: <57601a07c43a5_1e5b3f876808099c969bb@vagrant-ubuntu-trusty-64.mail>
+Subject: A new contact form message from Laura Theis
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Testing
+  Rendered static_pages/thank_you.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2036ms (Views: 1046.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-06-14 14:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-96f891576ec5923a9a6cc1ae5cb1e128daa244b49b016a94151f00158dfb51a6.css?body=1" for 10.0.2.2 at 2016-06-14 14:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static_pages.self-093275dd6c150c30752e3e5ad5b51edadaf655117266ff152d8be0edc558dbcb.css?body=1" for 10.0.2.2 at 2016-06-14 14:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-1891134fd61a848bd6fa17138dcc63da479d8a232337f45bc29d3c974a055271.css?body=1" for 10.0.2.2 at 2016-06-14 14:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-06-14 14:51:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.2.2 at 2016-06-14 14:51:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-06-14 14:51:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-14 14:51:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-14 14:51:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.0.2.2 at 2016-06-14 14:51:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products" for 10.0.2.2 at 2016-06-14 14:51:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.5ms)[0m  SELECT "products".* FROM "products"
+  Rendered collection (0.0ms)
+  Rendered products/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 251ms (Views: 215.7ms | ActiveRecord: 2.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.2ms)[0m  [1mINSERT INTO "products" ("name", "description", "colour", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mountain bike"], ["description", "I also created this product without using the HTML form, by using the seeds.rb file!"], ["colour", "orange and black"], ["price", 4900], ["image_url", "bike-mountain_1.jpg"], ["created_at", "2016-06-14 14:56:47.736308"], ["updated_at", "2016-06-14 14:56:47.736308"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  INSERT INTO "products" ("name", "description", "colour", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Town bike"], ["description", "Need a good grocery getter or to cruise over to dinner? Checkout this town bike."], ["colour", "deep brown and white"], ["price", 378], ["image_url", "bike-townie_1.jpg"], ["created_at", "2016-06-14 14:56:47.756507"], ["updated_at", "2016-06-14 14:56:47.756507"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (11.7ms)[0m  [1mINSERT INTO "products" ("name", "description", "colour", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Single speed bike"], ["description", "Want a little challenge riding around town? This will do just that and help you to look cool doing it too!"], ["colour", "black with yellow rims"], ["price", 514], ["image_url", "bike-single_speed_1.jpg"], ["created_at", "2016-06-14 14:56:47.770559"], ["updated_at", "2016-06-14 14:56:47.770559"]]
+  [1m[35m (5.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "products" ("name", "description", "colour", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Pump track bike"], ["description", "Love riding the rolls and testing your skills on the tight corners at the pump track?  This bike is for you!"], ["colour", "cyan"], ["price", 825], ["image_url", "bike-pump_track_1.jpg"], ["created_at", "2016-06-14 14:56:47.789568"], ["updated_at", "2016-06-14 14:56:47.789568"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "products" ("name", "description", "colour", "price", "image_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Test bike"], ["description", "This bike is so new it's not even on the market yet!"], ["colour", "tbd"], ["price", 0], ["image_url", "bike-test_1.jpg"], ["created_at", "2016-06-14 14:56:47.802473"], ["updated_at", "2016-06-14 14:56:47.802473"]]
+  [1m[35m (5.4ms)[0m  commit transaction
+
+
+Started GET "/products" for 10.0.2.2 at 2016-06-14 14:57:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (55.7ms)
+  Rendered products/index.html.erb within layouts/application (98.4ms)
+Completed 200 OK in 333ms (Views: 327.2ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/scaffolds.self-96f891576ec5923a9a6cc1ae5cb1e128daa244b49b016a94151f00158dfb51a6.css?body=1" for 10.0.2.2 at 2016-06-14 14:57:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-06-14 14:57:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static_pages.self-093275dd6c150c30752e3e5ad5b51edadaf655117266ff152d8be0edc558dbcb.css?body=1" for 10.0.2.2 at 2016-06-14 14:57:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-1891134fd61a848bd6fa17138dcc63da479d8a232337f45bc29d3c974a055271.css?body=1" for 10.0.2.2 at 2016-06-14 14:57:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-mountain_1-ff4cdb00c37825932943ace9a40d446c30074cbcef952d7ef353b12bbf52dca9.jpg" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-townie_1-9bab415e042555fafd86ed327b92cc08333c70ccd62ad8813045bd3db9ac13c4.jpg" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-single_speed_1-8e8e34003661dee2f621d481b27859ba3679254ff8f2a998d1a409b11b1a7e09.jpg" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-pump_track_1-5e6626d91a4f01292753031b2c6b5ccd2e5872ea6408a1050239567c8f8730ca.jpg" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-test_1-ba75b253091893b7ac4bf3e726fa040a6773e95ac36ac1692ebe544f56804b69.jpg" for 10.0.2.2 at 2016-06-14 14:57:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
