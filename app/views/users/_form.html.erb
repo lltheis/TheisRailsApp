@@ -12,12 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, placeholder: "First Name", class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
