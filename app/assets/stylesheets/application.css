@@ -16,7 +16,7 @@
 
 /*****  GENERAL   *****/
 .content {
- 	padding-left: 20px;
+ 	padding: 10px 20px;
  }
 
  th {
@@ -94,7 +94,7 @@
 	font-family: 'Playfair Display', 'Times New Roman', serif;
 	font-weight: 700;
 	text-transform: lowercase;
-	/*padding: 20px 0px;*/
+	padding: 5px 0px;
 }
 
  .featured-product {
@@ -159,4 +159,23 @@
 	max-width: 15%;
 }
 
+.btn-forms { 
+  color: #8CB63D; 
+  background-color: #FFFFFF; 
+  border-color: #8CB63D;
+  margin: 3px;
+} 
 
+.btn-forms:hover, 
+.btn-forms:focus, 
+.btn-forms:active, 
+.btn-forms.active, 
+.open .dropdown-toggle.btn-forms { 
+  color: #ffffff; 
+  background-color: #b4b4b4; 
+  border-color: #8CB63D; 
+} 
+
+.form-table-header {
+	width: 15%;
+}
