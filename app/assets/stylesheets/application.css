@@ -17,6 +17,7 @@
 /*****  GENERAL   *****/
 .content {
  	padding: 10px 20px;
+ 	z-index: 20;
  }
 
  th {
@@ -27,7 +28,6 @@
 	padding-top: 20px;
  }
 
- 
 
 /*****  PRODUCT   *****/
  .product-desc {
@@ -99,6 +99,7 @@
 
  .featured-product {
  	max-height: 200px;
+ 	min-height: 200px;
  	margin: auto;
  }
 
@@ -110,6 +111,10 @@
  	line-height: normal;
 	width: 100%;
 	text-align: center;
+ }
+
+.td-product {
+ 	border-top: none;
  }
 
 
@@ -183,3 +188,4 @@
 .form-field {
 	width: 50%;
 }
+
