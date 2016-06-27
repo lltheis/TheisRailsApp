@@ -2,23 +2,29 @@
   <table class="table">
     <tbody>
       <tr>
-        <td rowspan="6" style="vertical-align: middle; border: none;"><%= image_tag(@product.image_url, class: "img-responsive") %></td>
+        <td rowspan="5" style="vertical-align: middle; border: none;"><%= image_tag(@product.image_url, class: "img-responsive") %></td>
       </tr>
       <tr>
         <td style="border: none;"><h2><%= @product.name %></h2></td>
       </tr>
       <tr>
-        <td><h4><%= @product.description %></h4>
-        <p>Color: <%= @product.colour %></td></p>
+        <td><h4><%= @product.description %></h4><br>
+        Color: <%= @product.colour %></td>
       </tr>
       <tr>
         <td><%= number_to_currency(@product.price) %></td>
       </tr>
       <tr>
-        <td>Product Rating Stars</td>
+        <td><%= render 'new_comment' %></td>
+      </tr>
+      <tr >
+        <td rowspan="2"></td>
       </tr>
       <tr>
-        <td>Comments Section</td>
+        <td><h4>Comments about this product</h4>
+        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+        <%= render 'comments' %>
+        </td>
       </tr>
 
     </tbody>
