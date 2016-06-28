@@ -52003,3 +52003,176 @@ Processing by StaticPagesController#landing_page as HTML
   Rendered static_pages/landing_page.html.erb within layouts/application (54.5ms)
   [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 322ms (Views: 314.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-28 00:34:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (2.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (18351.3ms)
+Completed 200 OK in 18966ms (Views: 18892.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/static_pages.self-6d2559e2c90fdafc6d5c2aedd6295519d37a6b663f4c55d21610a65075ee8522.css?body=1" for 10.0.2.2 at 2016-06-28 00:34:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products" for 10.0.2.2 at 2016-06-28 00:34:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (58.0ms)
+  Rendered products/index.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 388ms (Views: 385.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2016-06-28 00:34:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (257.0ms)
+Completed 200 OK in 644ms (Views: 611.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2016-06-28 00:34:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (51.9ms)
+  Rendered products/index.html.erb within layouts/application (83.2ms)
+Completed 200 OK in 361ms (Views: 359.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/1" for 10.0.2.2 at 2016-06-28 00:34:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (1.7ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/_new_comment.html.erb (0.7ms)
+  [1m[36m (1.9ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35mComment Load (1.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC  [["product_id", 1]]
+  Rendered products/_comments.html.erb (2.8ms)
+  Rendered products/show.html.erb within layouts/application (138.6ms)
+Completed 200 OK in 598ms (Views: 381.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/star-off.png" for 10.0.2.2 at 2016-06-28 00:34:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/login" for 10.0.2.2 at 2016-06-28 00:34:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 277ms (Views: 275.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2016-06-28 00:34:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"80HCOPcuedwEqBtNb18GPIKEa7t8b1/eFEaJw81NaRxFgLlwgL2Y6cInSwRBYZIgZEkT3enVdUNBMupXYMVJSw==", "user"=>{"email"=>"theis.laura.l@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Go!"}
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "theis.laura.l@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (31.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-06-27 12:35:54.784700"], ["current_sign_in_at", "2016-06-28 00:34:53.814785"], ["sign_in_count", 6], ["updated_at", "2016-06-28 00:34:53.816852"], ["id", 1]]
+  [1m[35m (4.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 451ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-28 00:34:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (2.3ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (1.4ms)[0m  SELECT "products".* FROM "products"
+  Rendered static_pages/landing_page.html.erb within layouts/application (39.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 278ms (Views: 270.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2016-06-28 00:34:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.7ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (51.3ms)
+  Rendered products/index.html.erb within layouts/application (82.8ms)
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 355ms (Views: 350.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2016-06-28 00:34:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (1.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered products/_new_comment.html.erb (35.1ms)
+  [1m[35m (1.8ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 2]]
+  [1m[36mComment Load (1.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC[0m  [["product_id", 2]]
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered products/_comments.html.erb (18.4ms)
+  Rendered products/show.html.erb within layouts/application (138.3ms)
+Completed 200 OK in 384ms (Views: 373.1ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/star-off.png" for 10.0.2.2 at 2016-06-28 00:34:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/star-on.png" for 10.0.2.2 at 2016-06-28 00:34:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started DELETE "/logout" for 10.0.2.2 at 2016-06-28 00:35:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZvsSyFQDVjyJ8qqOwQ9Xao2bEYyItdK80ih5Os+6DtKHQPrkaTnkCDMuVIpOX3Sxp8633SmRcBf+iuwoZ8ZBgg=="}
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 71ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-06-28 00:35:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  [1m[36mProduct Load (1.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1[0m
+  [1m[35mProduct Load (2.0ms)[0m  SELECT "products".* FROM "products"
+  Rendered static_pages/landing_page.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 305ms (Views: 299.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2016-06-28 00:35:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (39.2ms)
+  Rendered products/index.html.erb within layouts/application (66.3ms)
+Completed 200 OK in 316ms (Views: 313.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2016-06-28 00:35:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (1.7ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered products/_new_comment.html.erb (0.3ms)
+  [1m[36m (1.6ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35mComment Load (1.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC  [["product_id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered products/_comments.html.erb (6.9ms)
+  Rendered products/show.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 318ms (Views: 309.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/star-off.png" for 10.0.2.2 at 2016-06-28 00:35:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/star-on.png" for 10.0.2.2 at 2016-06-28 00:35:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
