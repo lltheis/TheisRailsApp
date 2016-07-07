@@ -21,9 +21,12 @@
         <td rowspan="2"></td>
       </tr>
       <tr>
-        <td><h4>Comments about this product</h4>
-        <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+        <td>
+        <h4>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h4>
+        <h4>Comments about this product</h4>
         <%= render 'comments' %>
+
+        <%= will_paginate @comments %>
         </td>
       </tr>
 
