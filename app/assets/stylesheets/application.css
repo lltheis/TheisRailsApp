@@ -150,10 +150,8 @@
   padding-right:5px;
 }
 
-.footer-text {
-	position: absolute; 
-   top: 50%; 
-   transform: translate(0, -50%); 
+.footer-image {
+	height: 20px;
 }
 
 .new_product {
