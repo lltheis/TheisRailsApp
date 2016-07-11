@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
-def create
+  
+  def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
@@ -10,9 +11,10 @@ def create
       else
         format.html { redirect_to @product, alert: 'Review was not saved successfully.' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
     end
   end
+  
+end
 
 	def destroy
     @comment = Comment.find(params[:id])

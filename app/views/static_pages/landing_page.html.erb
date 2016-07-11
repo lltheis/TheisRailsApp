@@ -4,6 +4,8 @@
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -23,14 +25,14 @@
 			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 			    <span class="sr-only">Next</span>
 		  	</a>
-      </div>
-     </div>
+      </div><!-- carousel caption -->
+     </div><!-- list products -->
     <% end %>
-  </div>
+  </div><!-- carousel -->
 </div>
 
 
 <div class="featured-next col-sm-8">
-			<div class = "featured-next"><strong>Ready to buy?</strong> <%= link_to "Yes!", orders_path %></div>
-			<div class = "featured-next"><strong>Want to check out other bikes? </strong><%= link_to "Yes!", products_path %></div>
+  <div class = "featured-next"><strong>Ready to buy?</strong> <%= link_to "Yes!", orders_path %></div>
+  <div class = "featured-next"><strong>Want to check out other bikes? </strong><%= link_to "Yes!", products_path %></div>
 </div>

@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    respond_to :json, :html
+  respond_to :json, :html
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -7,13 +7,14 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      if Rails.env.development?
-            @products = Product.where("name LIKE ?", "%#{search_term}%")
-            end
-          #Production
-            if Rails.env.production?
-            @products = Product.where("name ilike ?", "%#{search_term}%")
-            end
+    if Rails.env.development?
+      @products = Product.where("name LIKE ?", "%#{search_term}%")
+    end
+  
+    #Production
+    if Rails.env.production?
+      products = Product.where("name ilike ?", "%#{search_term}%")
+    end
     else
       @products = Product.all
     end
@@ -85,4 +86,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :description, :image_url, :color, :price)
     end
-end
+  end
