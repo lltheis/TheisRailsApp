@@ -127,7 +127,7 @@
  }
 
 
-/*****  PRODUCT   *****/
+ /*****  FOOTER   *****/
 .footer {
   position: absolute;
   bottom: 0;
@@ -136,22 +136,17 @@
   padding: 10px 0px;
 }
 
-.footer, .push {
-    clear: both;
-}
-
-.footer-left {
-  display: inline-block;
-  vertical-align: middle;
-	}
-
-.footer-right {
-  float: right;
-  padding-right:5px;
+.footer-center  {
+	float: none;
 }
 
 .footer-image {
 	height: 20px;
+	display: inline-block;
+}
+
+.footer-right  {
+	text-align: right;
 }
 
 .new_product {
