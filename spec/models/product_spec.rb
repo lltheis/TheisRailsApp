@@ -14,11 +14,10 @@ describe Product do
     it "returns the average rating of all comments" do
       expect(@product.average_rating). to eq (3)
     end
-  end
 
     it "is not valid" do
-      expect(Product.new(name: "", description: "Nice bike")).not_to_be_valid
+      expect(Product.new(name: "", description: "Nice bike")).not_to be_valid
     end
-
+  end
   end
 
