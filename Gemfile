@@ -36,6 +36,8 @@ group :development, :test do
   gem 'byebug'
   # Use RSpec Rails testing environment
   gem 'rspec-rails', '~> 3.5'
+  # FactoryGirl for test data
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
