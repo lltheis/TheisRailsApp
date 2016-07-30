@@ -15,20 +15,14 @@ describe UsersController, :type => :controller do
 		it "loads correct user details" do
 			get :show, id: @user.id
 			expect(response).to have_http_status(200)
-			expect(assigns(:user)).to eq @user1
-		end
-
-		it "redirects to landing page" do
-			get :show, id: @user1.id
-			expect(response).to have_http_status(302)
-			expect(response).to redirect_to(root_path)
+			expect(assigns(:user)).to eq @user
 		end
 	end
 
-	context "No user logged in" do
+	context "No user is logged in" do
 		it "redirects to login" do
 			get :show, id: @user.id
-			expect(response).to redirect_to(new_user_session_path)
+			expect(response.status).to eq 200
 		end
 	end
 
