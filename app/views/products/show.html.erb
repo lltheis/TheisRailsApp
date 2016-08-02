@@ -12,6 +12,11 @@
         Color: <%= @product.colour %></td>
       </tr>
       <tr>
+        <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </tr>
+      <tr>
         <td><%= number_to_currency(@product.price) %></td>
       </tr>
       <tr>
@@ -29,7 +34,6 @@
         <%= will_paginate @comments %>
         </td>
       </tr>
-
     </tbody>
   </table>
 

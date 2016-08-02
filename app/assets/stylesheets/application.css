@@ -31,11 +31,10 @@
 
 /*****  PRODUCT   *****/
  .product-desc {
- 	background-color: #5F25A0;
- 	color: #B4B4B4;
  	padding: 5px;
  	min-height: 66px;
  	margin-bottom: 6px;
+ 	font-size: 1.1em;
  }
 
  .product-price {
@@ -43,6 +42,7 @@
  		font-size: 1.1em;
  		text-align: center;
  		font-weight: 700;
+ 		padding-right: 30px;
  }
 
  .product-tools {
@@ -62,8 +62,9 @@
 
 .carousel-inner > .item > img, 
 .carousel-inner > .item > a > img{
-	margin: auto;
-	max-height: 250px;
+	margin: 30px auto 30px auto;
+	min-height: 350px;
+	max-height: 350px;
 }
 
 
@@ -76,10 +77,18 @@
 	position: absolute;
 	left: 0;
 	top: 35%;
-	height: 30px;
+	height: 36px;
 	width: 100%;
 	background-color: rgba(193, 193, 193, 0.8);
 	padding: 5px;
+}
+
+.carousel-indicators li {
+	border: 2px solid #5F25A0;
+}
+
+.carousel-indicators .active {
+	background-color: #5F25A0;
 }
 
 .glyphicon {
@@ -88,13 +97,13 @@
 
 .product-title {
 	text-shadow: none;
-	color: #fff;
 	font-size: 1.5em;
 	text-align: center;
 	font-family: 'Playfair Display', 'Times New Roman', serif;
 	font-weight: 700;
 	text-transform: lowercase;
-	padding: 5px 0px;
+	padding-top: 4px;
+	height: 30px;
 }
 
  .featured-product {
@@ -111,6 +120,7 @@
  	line-height: normal;
 	width: 100%;
 	text-align: center;
+	padding-top: 20px;
  }
 
 .td-product {
@@ -118,28 +128,26 @@
  }
 
 
-/*****  PRODUCT   *****/
+ /*****  FOOTER   *****/
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
-  margin-top: 10px;
-  padding: 15px;
   background-color: #E3F1CD;
+  padding: 10px 0px;
 }
 
-.footer, .push {
-    clear: both;
+.footer-center  {
+	float: none;
 }
 
-.footer-left {
-  display: inline-block;
+.footer-image {
+	height: 20px;
+	display: inline-block;
 }
 
-.footer-right {
-  float: right;
-  padding-right:5px;
+.footer-right  {
+	text-align: right;
 }
 
 .new_product {
@@ -185,4 +193,23 @@
 /*****  TABLES   *****/
 .table-img {
 	width: 30%;
+	padding-right: 10px;
+}
+
+/*****  PAGINATION   *****/
+.pagination {
+	font-size: 1.2em;
+}
+
+.previous_page {
+	padding: 2px;
+}
+
+.current {
+	padding: 2px;
+	font-style: normal;
+}
+
+.next_page {
+	padding: 2px;
 }
