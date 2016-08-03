@@ -52869,3 +52869,403 @@ Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0
 
 Started GET "/assets/CareerFoundry-12f44d160f17b08be4747efca6162e42e3bfbd827609ecf4c9572be4dab8b44d.png" for 10.0.2.2 at 2016-08-02 12:43:44 +0000
 Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products" for 10.0.2.2 at 2016-08-03 00:41:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.5ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (2008.3ms)
+  Rendered products/_product.html.erb (15.1ms)
+  Rendered products/_product.html.erb (10.5ms)
+  Rendered products/_product.html.erb (12.7ms)
+  Rendered products/_product.html.erb (10.8ms)
+  Rendered products/index.html.erb within layouts/application (2260.1ms)
+Completed 200 OK in 2913ms (Views: 2856.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/favicon.ico" for 10.0.2.2 at 2016-08-03 00:41:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products/3" for 10.0.2.2 at 2016-08-03 00:41:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (1.4ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.4ms)
+  Rendered products/_new_comment.html.erb (0.9ms)
+  [1m[35m (1.6ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 3]]
+  [1m[36mComment Load (1.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 3]]
+  Rendered products/_comments.html.erb (3.5ms)
+  Rendered products/show.html.erb within layouts/application (118.5ms)
+Completed 200 OK in 540ms (Views: 413.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/products/bike-single_speed_1.jpg" for 10.0.2.2 at 2016-08-03 00:41:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"bike-single_speed_1"}
+  [1m[35mProduct Load (1.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=bike-single_speed_1):
+  app/controllers/products_controller.rb:81:in `set_product'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-08-03 17:55:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (2.4ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (1.8ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (1392.6ms)
+Completed 200 OK in 2345ms (Views: 2275.8ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2016-08-03 17:55:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (1.9ms)[0m  SELECT "products".* FROM "products"
+
+  Rendered products/_product.html.erb (30.8ms)
+  Rendered products/index.html.erb within layouts/application (73.6ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 1.9ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="col-xs-12 col-sm-4">
+    2: 	<div class="product-title"><%= product.name %></div>
+    3: 	<% logger.debug "Product: #{@product.name}"%>
+    4: 		<%= image_tag(product.image_url, class: "img-responsive featured-product") %>
+    5: 	<div class="product-desc"><%= product.description %></div>
+    6: 		<span class="product-price">Retail Price = $ <%= product.price %></span>
+  app/views/products/_product.html.erb:3:in `_app_views_products__product_html_erb___18957084464268826_70094487341400'
+  app/views/products/index.html.erb:8:in `block in _app_views_products_index_html_erb__1799914614806893692_70094487167760'
+  app/views/products/index.html.erb:6:in `_app_views_products_index_html_erb__1799914614806893692_70094487167760'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
+
+
+Started GET "/products" for 10.0.2.2 at 2016-08-03 17:55:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (2.3ms)[0m  [1mSELECT "products".* FROM "products"[0m
+
+Product: Mountain bike
+  Rendered products/_product.html.erb (15.7ms)
+
+Product: Town bike
+  Rendered products/_product.html.erb (11.7ms)
+
+Product: Single speed bike
+  Rendered products/_product.html.erb (13.3ms)
+
+Product: Pump track bike
+  Rendered products/_product.html.erb (11.9ms)
+
+Product: Test bike
+  Rendered products/_product.html.erb (11.2ms)
+  Rendered products/index.html.erb within layouts/application (227.1ms)
+Completed 200 OK in 543ms (Views: 539.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/2" for 10.0.2.2 at 2016-08-03 17:55:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProduct Load (1.7ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 2]]
+comments value #<Comment::ActiveRecord_AssociationRelation:0x007f804a2f7980>
+user has correct permission: #<Ability:0x007f804a2f41b8>
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  Rendered products/_new_comment.html.erb (0.6ms)
+  [1m[36m (3.0ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[35mComment Load (1.8ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0  [["product_id", 2]]
+  Rendered products/_comments.html.erb (4.5ms)
+  Rendered products/show.html.erb within layouts/application (204.7ms)
+Completed 200 OK in 742ms (Views: 520.4ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/products/bike-townie_1.jpg" for 10.0.2.2 at 2016-08-03 17:55:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"bike-townie_1"}
+  [1m[36mProduct Load (2.9ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 7ms (ActiveRecord: 2.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=bike-townie_1):
+  app/controllers/products_controller.rb:84:in `set_product'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2016-08-03 18:15:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (1.8ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (1.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (960.0ms)
+Completed 200 OK in 1518ms (Views: 1454.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/favicon.ico" for 10.0.2.2 at 2016-08-03 18:15:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 10.0.2.2 at 2016-08-03 18:15:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#landing_page as HTML
+  [1m[35mProduct Load (1.5ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."id" ASC LIMIT 1
+  [1m[36mProduct Load (1.4ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered static_pages/landing_page.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 393ms (Views: 346.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-96f891576ec5923a9a6cc1ae5cb1e128daa244b49b016a94151f00158dfb51a6.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static_pages.self-6d2559e2c90fdafc6d5c2aedd6295519d37a6b663f4c55d21610a65075ee8522.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-8c34a8e5fcc3be8cde1d25b58989c56e6dda525c9add79d8a14240dd730afd26.css?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-12d3687fcc231d56df86026883b494bbdd019542569a98fb449584141ff8c36f.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/site.self-6adc7c74d5adeaeaaddeed972ebea027058f78ad1c04a082dc932bc18cbfcbbc.js?body=1" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-mountain_1-ff4cdb00c37825932943ace9a40d446c30074cbcef952d7ef353b12bbf52dca9.jpg" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-townie_1-9bab415e042555fafd86ed327b92cc08333c70ccd62ad8813045bd3db9ac13c4.jpg" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-single_speed_1-8e8e34003661dee2f621d481b27859ba3679254ff8f2a998d1a409b11b1a7e09.jpg" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-pump_track_1-5e6626d91a4f01292753031b2c6b5ccd2e5872ea6408a1050239567c8f8730ca.jpg" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bike-test_1-ba75b253091893b7ac4bf3e726fa040a6773e95ac36ac1692ebe544f56804b69.jpg" for 10.0.2.2 at 2016-08-03 18:15:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/CareerFoundry-12f44d160f17b08be4747efca6162e42e3bfbd827609ecf4c9572be4dab8b44d.png" for 10.0.2.2 at 2016-08-03 18:15:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/favicon.ico" for 10.0.2.2 at 2016-08-03 18:15:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products" for 10.0.2.2 at 2016-08-03 18:16:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.1ms)[0m  SELECT "products".* FROM "products"
+
+Product: Mountain bike
+  Rendered products/_product.html.erb (20.5ms)
+
+Product: Town bike
+  Rendered products/_product.html.erb (13.6ms)
+
+Product: Single speed bike
+  Rendered products/_product.html.erb (15.2ms)
+
+Product: Pump track bike
+  Rendered products/_product.html.erb (9.9ms)
+
+Product: Test bike
+  Rendered products/_product.html.erb (10.9ms)
+  Rendered products/index.html.erb within layouts/application (261.4ms)
+Completed 200 OK in 550ms (Views: 546.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/products/new" for 10.0.2.2 at 2016-08-03 18:16:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (266.3ms)
+  Rendered products/new.html.erb within layouts/application (283.7ms)
+Completed 200 OK in 598ms (Views: 597.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for 10.0.2.2 at 2016-08-03 18:16:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (1.3ms)
+  Rendered products/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 300ms (Views: 299.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 10.0.2.2 at 2016-08-03 18:16:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dsSArzh7BTNcSdZoiZTNxJyfwEeQOOdzI8V/QaPm7qVTDp822KUikC0aP6uDFT859lzT+rcSmdd0WLNs6il6Dw==", "product"=>{"name"=>"Test new product", "description"=>"test", "image_url"=>"test.jpg", "colour"=>"black", "price"=>"100"}, "commit"=>"Create Product"}
+Unpermitted parameter: colour
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.6ms)[0m  INSERT INTO "products" ("name", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Test new product"], ["description", "test"], ["image_url", "test.jpg"], ["price", 100.0], ["created_at", "2016-08-03 18:18:11.336389"], ["updated_at", "2016-08-03 18:18:11.336389"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 106864ms (ActiveRecord: 15.2ms)
+
+
+Started POST "/products" for 10.0.2.2 at 2016-08-03 18:18:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dsSArzh7BTNcSdZoiZTNxJyfwEeQOOdzI8V/QaPm7qVTDp822KUikC0aP6uDFT859lzT+rcSmdd0WLNs6il6Dw==", "product"=>{"name"=>"Test new product", "description"=>"test", "image_url"=>"test.jpg", "colour"=>"black", "price"=>"100"}, "commit"=>"Create Product"}
+Unpermitted parameter: colour
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (8.7ms)[0m  [1mINSERT INTO "products" ("name", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Test new product"], ["description", "test"], ["image_url", "test.jpg"], ["price", 100.0], ["created_at", "2016-08-03 18:18:19.355940"], ["updated_at", "2016-08-03 18:18:19.355940"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/products/7
+Completed 302 Found in 7866ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/products/7" for 10.0.2.2 at 2016-08-03 18:18:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (1.7ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 7]]
+comments value #<Comment::ActiveRecord_AssociationRelation:0x007ff91d77ed90>
+user has correct permission: #<Ability:0x007ff91d776f78>
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  Rendered products/_new_comment.html.erb (0.7ms)
+  [1m[35m (2.4ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 7]]
+  [1m[36mComment Load (2.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 3 OFFSET 0[0m  [["product_id", 7]]
+  Rendered products/_comments.html.erb (4.3ms)
+  Rendered products/show.html.erb within layouts/application (154.4ms)
+Completed 200 OK in 614ms (Views: 456.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/images/test.jpg" for 10.0.2.2 at 2016-08-03 18:18:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/images/test.jpg"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.8/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.8/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.8/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (157.8ms)
+
+
+Started GET "/assets/star-off.png" for 10.0.2.2 at 2016-08-03 18:18:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/products/test.jpg" for 10.0.2.2 at 2016-08-03 18:18:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProductsController#show as JPEG
+  Parameters: {"id"=>"test"}
+  [1m[35mProduct Load (2.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms (ActiveRecord: 2.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=test):
+  app/controllers/products_controller.rb:86:in `set_product'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.8/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
