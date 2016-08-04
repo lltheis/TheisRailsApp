@@ -33,3 +33,4 @@ class PaymentsController < ApplicationController
     redirect_to product_path(@product)
   end
 end
+
