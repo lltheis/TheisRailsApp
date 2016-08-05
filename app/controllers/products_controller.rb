@@ -7,8 +7,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
-      logger.debug "#{params[:q]}"
-      byebug
+      
     if Rails.env.development?
       @products = Product.where("name LIKE ?", "%#{search_term}%")
     end
@@ -26,8 +25,6 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
-    logger.debug "comments value #{@comments}"
-    logger.debug "user has correct permission: #{current_ability}"
   end
 
   # GET /products/new
@@ -43,7 +40,6 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-    byebug
     
     respond_to do |format|
       if @product.save
