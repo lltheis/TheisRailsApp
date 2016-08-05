@@ -29,8 +29,9 @@ class PaymentsController < ApplicationController
       body = e.json_body
       err = body[:error]
       flash[:error] = "There was an error processing your payment: #{err[:message]}"
-    end
+    
     redirect_to product_path(@product)
+    end
   end
 end
 
