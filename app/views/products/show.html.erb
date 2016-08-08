@@ -1,42 +1,35 @@
 <div class="content">
-  <table>
-    <tbody>
-      <tr>
-        <td class="table-img" rowspan="5" style="vertical-align: middle; border: none;"><%= image_tag(@product.image_url, class: "img-responsive") %></td>
-      </tr>
-      <tr>
-        <td style="border: none;"><h2><%= @product.name %></h2></td>
-      </tr>
-      <tr>
-        <td><h4><%= @product.description %></h4><br>
-        Color: <%= @product.colour %></td>
-      </tr>
-      <tr>
-        <%= form_tag "/payments/create" do %>
-          <%= render partial: "shared/stripe_checkout_button" %>
-        <% end %>
-      </tr>
-      <tr>
-        <td><%= number_to_currency(@product.price) %></td>
-      </tr>
-      <tr>
-        <td><%= render 'new_comment' %></td>
-      </tr>
-      <tr >
-        <td rowspan="2"></td>
-      </tr>
-      <tr>
-        <td>
-        <h4>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h4>
-        <h4>Comments about this product</h4>
+  <div class="col-sm-6" >
+    <div style="vertical-align: middle; border: none;"><%= image_tag(@product.image_url, class: "img-responsive") %>
+    </div>
+  </div>
+    
+    <div class="col-sm-6">
+      <h2><%= @product.name %></h2>
+      <h4><%= @product.description %></h4>
+      <br>Color: <%= @product.colour %>
+    <div>
+      <%= form_tag "/payments/create" do %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+          <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
+    </div>
+    <div>
+      <%= number_to_currency(@product.price) %>
+    </div>
+    <div>
+      <%= render 'new_comment' %>
+    </div>
+    <div>
+      <h4>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h4>
+      <h4>Comments about this product</h4>
         <%= render 'comments' %>
-
         <%= will_paginate @comments %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+    </div>
+  </div>
+  <div class="col-sm-12">      
     <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-forms" %>
     <%= link_to 'Back', products_path, class: "btn btn-forms" %>
+  </div>
+
 </div>

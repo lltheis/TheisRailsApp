@@ -41,4 +41,7 @@ Rails.application.configure do
 
   #Devise authentication so dynamic links that show up inside emails from your development environment generate the right URLs.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #Whitelist 10.0.2.2 network space
+  config.web_console.whitelisted_ips = '10.0.2.2'
 end
