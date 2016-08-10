@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('ready page:load', function(){
+var refreshRating = function() {
   $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
 	$('.rated').raty({ path: '/assets',
 		readOnly: true,
@@ -23,6 +23,9 @@ $(document).on('ready page:load', function(){
 			return $(this).attr('data-score');
 		}
 	});
+};
+
+$(document).on('ready page:load', function(){
 	
 	$('.img-zoom').elevateZoom();
 });
