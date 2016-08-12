@@ -5,9 +5,11 @@
   </div>
     
     <div class="col-sm-6">
-      <h2><%= @product.name %></h2>
-      <h4><%= @product.description %></h4>
-      <br>Color: <%= @product.colour %>
+      <% cache @product do %>
+        <h2><%= @product.name %></h2>
+        <h4><%= @product.description %></h4>
+        <br>Color: <%= @product.colour %>
+      <% end %>
     <div>
       <%= form_tag "/payments/create" do %>
         <%= render partial: "shared/stripe_checkout_button" %>
