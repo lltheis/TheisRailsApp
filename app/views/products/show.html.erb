@@ -4,7 +4,7 @@
     </div>
   </div>
     
-    <div class="col-sm-6">
+    <div class="col-sm-6" data-product-id="<%= @product.id %>">
       <% cache @product do %>
         <h2><%= @product.name %></h2>
         <h4><%= @product.description %></h4>

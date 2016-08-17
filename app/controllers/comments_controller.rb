@@ -2,12 +2,14 @@ class CommentsController < ApplicationController
   
   def create
     @product = Product.find(params[:product_id])
+    @user = current_user
     @comment = @product.comments.new(comment_params)
     @comment.user = current_user
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
-        ActionCable.server.broadcast 'product_channel', comment: @comment
+        # For broadcasting all comments to all products pages
+        # ActionCable.server.broadcast 'product_channel', comment: @comment
         format.json { render :show, status: :created, location: @product }
         format.js
       else
