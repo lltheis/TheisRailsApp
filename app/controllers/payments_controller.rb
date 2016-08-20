@@ -1,5 +1,5 @@
 class PaymentsController < ApplicationController
-    before_action :authenticate_user!
+    # before_action :authenticate_user!
   
   # POST /payments
   # POST /payments.json
@@ -22,8 +22,8 @@ class PaymentsController < ApplicationController
           :user_id => @user_id,
           :total => @product_price
           )
+        UserMailer.order_placed(@user, @product).deliver_now
       end
-      flash[:success] = "Your payment processed successfully!"
 
     rescue Stripe::CardError => e
       # The card has been declined
