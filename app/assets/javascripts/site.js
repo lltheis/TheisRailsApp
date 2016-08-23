@@ -15,14 +15,18 @@
 //= require turbolinks
 //= require_tree .
 
+var refreshRating = function() {
+  $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]' });
+  $('.rated').raty({ path: '/assets',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+};
+
 $(document).on('turbolinks:load', function() {
-  $('.rating').raty( { path: '/assets/images', scoreName: 'comment[rating]' });
-	$('.rated').raty({ path: '/assets/images',
-		readOnly: true,
-		score: function() {
-			return $(this).attr('data-score');
-		}
-	});
-	
+  refreshRating();
+
 	$('.img-zoom').elevateZoom();
 });
