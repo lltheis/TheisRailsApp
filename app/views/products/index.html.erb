@@ -3,13 +3,11 @@
   
   <div class="container-fluid">
     <div class="row">
-      <% cache (cache_key_for_products) do %>
-        <%= render @products %>
-      <% end %>
+      <%= show_products(@products) %>
     </div>
   </div>
   <br>
   <div class="col-sm-12">
-    <%= link_to 'New Product', new_product_path, class: "btn btn-forms" %>
+    <%= link_to 'New Product', new_product_path, class: "btn btn-forms" if ( signed_in?) %>
   </div>
 </div>
