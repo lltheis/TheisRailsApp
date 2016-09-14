@@ -1,12 +1,13 @@
 <% cache product do %>
-	<div class="col-xs-12 col-sm-4">
+	<div class="col-xs-12 col-sm-4 text-center">
 		<div class="product-title"><%= product.name %></div>
 			<%= image_tag(product.image_url, class: "img-responsive featured-product") %>
 		<div class="product-desc"><%= product.description %></div>
-			<span class="product-price">Retail Price = $ <%= product.price %></span>
-				<%= link_to product, class:"btn btn-default", role:"button" do %>
+		<div class="product-price">Retail Price <%= number_to_currency(product.price) %></div>
+		<div><%= link_to product, class:"btn btn-default", role:"button" do %>
 	      	Tell me more!
 	      <% end %> 
+	  </div>
 
 		<hr>
 		

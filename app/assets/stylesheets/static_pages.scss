@@ -32,6 +32,22 @@ h1, h2, h3 {
 	max-height: 200px;
 }
 
+hr.hr-dashed {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+.list-columns {
+    -moz-column-count: 2;
+    -moz-column-gap: 5px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 5px;
+    column-count: 2;
+    column-gap: 5px;
+    list-style-position: inside;
+}
+
 
 //NAVIGATION
 .navbar-inverse {
@@ -127,4 +143,17 @@ background-image: none;
     font-weight: 700;
     letter-spacing: .1em;
     font-size: 1.3em;
+}
+
+.modal-header {
+	border-bottom: 0px;
+	height: 40px;
+}
+
+.modal body {
+	padding: 15px 15px 0px 15px;
+}
+
+.modal-footer {
+	padding: 5px;
 }

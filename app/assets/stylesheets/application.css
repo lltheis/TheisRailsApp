@@ -39,10 +39,10 @@
 
  .product-price {
  		font-family: 'Playfair Display', 'Times New Roman', serif;
- 		font-size: 1.1em;
+ 		font-size: 1.2em;
  		text-align: center;
  		font-weight: 700;
- 		padding-right: 30px;
+ 		padding-bottom: 5px;
  }
 
  .product-img {
@@ -192,6 +192,10 @@
   background-color: #b4b4b4; 
   border-color: #8CB63D; 
 } 
+
+.btn-default {
+	border-color: #8cb63d;
+}
 
 
 /*****  TABLES   *****/

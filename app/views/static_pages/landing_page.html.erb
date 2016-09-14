@@ -1,3 +1,43 @@
+    <script type="text/javascript">
+            $(window).load(function(){
+                $('#myModal').modal('show');
+            });
+        </script>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="project-modal-title text-center">Thanks for coming!<br>I'm Laura Theis.</div>
+        </div>
+        <div class="modal-body">
+          <h5>This site is a demonstration site only. I created this portfolio site through the web developer course at <a href="http://careerfoundry.com/en" target="_blank"><%= image_tag("CareerFoundry.png", class: "img-responsive footer-image") %></a>.</h5>
+        <h5>This site, showcasing the following skills, is a <span style="font-weight: bold">responsive, interactive, and dynamic Rails website</span>. <br><br>Please feel free to register on the site to explore logged in / logged out functionality.</h5>
+        <ul class="list-columns">
+          <li>HTML, HTML Forms, Mailers</li>
+          <li>CSS, Bootstrap, Modal windows</li>
+          <li>Javascript, Javascript APIs</li>
+          <li>Ruby, Rails (MVC)</li>
+          <li>Heroku</li>
+          <li>Payments through Stripe</li>
+          <li>Authentication, Authorization, User Moderation</li>
+          <li><a href="https://github.com/lltheis/TheisRailsApp" target="_blank">GitHub</a> version control</li>
+          <li>Redis</li>
+          <li>ActionCable</li>
+        </ul>
+        </div>
+        <div class="modal-footer">
+          <h4 class="text-center">If you'd like to know a little more about me, <br>check out my website at <a href="http://www.the-is.com" target="_blank">the-is.com.</a></h4>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -33,6 +73,5 @@
 
 
 <div class="featured-next col-sm-8">
-  <div class = "featured-next"><strong>Ready to buy?</strong> <%= link_to "Yes!", orders_path %></div>
-  <div class = "featured-next"><strong>Want to check out other bikes? </strong><%= link_to "Yes!", products_path %></div>
+  <div class = "featured-next"><strong>Want to check out other bikes? </strong><%= link_to "Yes, go!", products_path %></div>
 </div>

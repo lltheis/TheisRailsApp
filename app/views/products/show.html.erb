@@ -8,7 +8,8 @@
       <% cache @product do %>
         <h2><%= @product.name %></h2>
         <h4><%= @product.description %></h4>
-        <br>Color: <%= @product.colour %>
+        <br><span class="product-price">Color:</span> <%= @product.colour %>
+        <br><br><span class="product-price">Retail Price:</span> <%= number_to_currency(@product.price) %></span>
       <% end %>
     <div>
       <% if user_signed_in? %>
@@ -18,23 +19,25 @@
         <% end %>
       <% end %>
     </div>
+    <hr  class="hr-dashed">
     <div>
-      <%= number_to_currency(@product.price) %>
+      <h3>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></h3>
     </div>
     <div>
-      <%= render 'new_comment' %>
+      <h3>Customer Ratings & Comments:</h3>
+      <%= render 'comments' %>
+      <%= will_paginate @comments %>
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!
     </div>
-    <div>
-      <h4>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h4>
-      <h4>Comments about this product</h4>
-        <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-        <%= render 'comments' %>
-        <%= will_paginate @comments %>
+        <div>
+          <%= render 'new_comment' %>
+        </div>
     </div>
   </div>
   <div class="col-sm-12">      
-    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-forms" if ( signed_in?) %>
     <%= link_to 'Back', products_path, class: "btn btn-forms" %>
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-forms" if ( signed_in?) %>
+    
   </div>
 
 </div>
