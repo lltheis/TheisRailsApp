@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="col-sm-12">      
-    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-forms" %>
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-forms" if ( signed_in?) %>
     <%= link_to 'Back', products_path, class: "btn btn-forms" %>
   </div>
 
